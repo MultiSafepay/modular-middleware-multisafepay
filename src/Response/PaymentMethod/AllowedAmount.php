@@ -1,6 +1,6 @@
 <?php
 
-namespace ModularMultiSafepay\ModularMiddlewareMultiSafepay\Response\PaymentMethod;
+namespace ModularMultiSafepay\ModularMultiSafepay\Response\PaymentMethod;
 
 final class AllowedAmount
 {

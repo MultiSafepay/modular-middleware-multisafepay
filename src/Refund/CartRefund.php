@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 
 
-namespace ModularMultiSafepay\ModularMiddlewareMultiSafepay\Refund;
+namespace ModularMultiSafepay\ModularMultiSafepay\Refund;
 
 
-use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Order\ShoppingCart;
+use ModularMultiSafepay\ModularMultiSafepay\Order\ShoppingCart;
 
 class CartRefund extends Refundable
 {

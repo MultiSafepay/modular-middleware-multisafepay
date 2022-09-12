@@ -1,6 +1,6 @@
 <?php
 
-namespace ModularMultiSafepay\ModularMiddlewareMultiSafepay;
+namespace ModularMultiSafepay\ModularMultiSafepay;
 
 interface IFormatData
 {

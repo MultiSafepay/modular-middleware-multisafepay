@@ -1,6 +1,6 @@
 <?php
 
-namespace ModularMultiSafepay\ModularMiddlewareMultiSafepay\Transaction;
+namespace ModularMultiSafepay\ModularMultiSafepay\Transaction;
 
 /**
  * @TODO more data is available but not yet added see https://docs.multisafepay.com/api/#get-order-details

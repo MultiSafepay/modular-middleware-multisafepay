@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace ModularMultiSafepay\ModularMiddlewareMultiSafepay\Requests;
+namespace ModularMultiSafepay\ModularMultiSafepay\Requests;
 
-use ModularMultiSafepay\ModularMiddlewareMultiSafepay\MultiSafepayRequest;
+use ModularMultiSafepay\ModularMultiSafepay\MultiSafepayRequest;
 
 class GetTransaction extends MultiSafepayRequest
 {

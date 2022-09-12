@@ -1,8 +1,8 @@
 <?php
 
-namespace ModularMultiSafepay\ModularMiddlewareMultiSafepay;
+namespace ModularMultiSafepay\ModularMultiSafepay;
 
-use ModularMultiSafepay\ModularMiddlewareMultiSafepay\MultiSafepayRequest;
+use ModularMultiSafepay\ModularMultiSafepay\MultiSafepayRequest;
 use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;
 

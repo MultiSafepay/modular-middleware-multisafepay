@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 
 
-namespace ModularMultiSafepay\ModularMiddlewareMultiSafepay\Refund;
+namespace ModularMultiSafepay\ModularMultiSafepay\Refund;
 
 
 final class Refund extends Refundable

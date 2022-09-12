@@ -1,12 +1,12 @@
 <?php declare(strict_types=1);
 
 
-namespace ModularMultiSafepay\ModularMiddlewareMultiSafepay\Requests;
+namespace ModularMultiSafepay\ModularMultiSafepay\Requests;
 
 
-use ModularMultiSafepay\ModularMiddlewareMultiSafepay\MultiSafepayRequest;
-use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Response\PaymentMethod\AllowedAmount;
-use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Response\PaymentMethod\PaymentMethod;
+use ModularMultiSafepay\ModularMultiSafepay\MultiSafepayRequest;
+use ModularMultiSafepay\ModularMultiSafepay\Response\PaymentMethod\AllowedAmount;
+use ModularMultiSafepay\ModularMultiSafepay\Response\PaymentMethod\PaymentMethod;
 use Illuminate\Support\Collection;
 
 final class GetPaymentMethods extends MultiSafepayRequest

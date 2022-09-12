@@ -1,8 +1,8 @@
 <?php
 
-namespace ModularMultiSafepay\ModularMiddlewareMultiSafepay\Order;
+namespace ModularMultiSafepay\ModularMultiSafepay\Order;
 
-use ModularMultiSafepay\ModularMiddlewareMultiSafepay\IFormatData;
+use ModularMultiSafepay\ModularMultiSafepay\IFormatData;
 
 class PaymentOptions implements IFormatData
 {

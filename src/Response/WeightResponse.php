@@ -1,6 +1,6 @@
 <?php
 
-namespace ModularMultiSafepay\ModularMiddlewareMultiSafepay\Response;
+namespace ModularMultiSafepay\ModularMultiSafepay\Response;
 
 class WeightResponse
 {

@@ -30,7 +30,7 @@
     },
     "autoload": {
         "psr-4": {
-            "ModularMultiSafepay\\ModularMiddlewareMultiSafepay\\": "src"
+            "ModularMultiSafepay\\ModularMultiSafepay\\": "src"
         }
     },
     "scripts": {
@@ -45,10 +45,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "ModularMultiSafepay\\ModularMiddlewareMultiSafepay\\ModularMiddlewareMultiSafepayServiceProvider"
+                "ModularMultiSafepay\\ModularMultiSafepay\\ModularMiddlewareMultiSafepayServiceProvider"
             ],
             "aliases": {
-                "ModularMiddlewareMultisafepay": "ModularMultiSafepay\\ModularMiddlewareMultiSafepay\\Facades\\ModularMiddlewareMultiSafepay"
+                "ModularMultisafepay": "ModularMultiSafepay\\ModularMultiSafepay\\Facades\\ModularMiddlewareMultiSafepay"
             }
         }
     },

@@ -1,23 +1,25 @@
 <?php declare(strict_types=1);
 
 
-namespace ModularMultiSafepay\ModularMiddlewareMultiSafepay;
+namespace ModularMultiSafepay\ModularMultiSafepay;
 
 
-use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Order\Item;
-use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Order\Order;
-use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Order\ShoppingCart;
-use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Refund\Refundable;
-use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Requests\GetPaymentMethods;
-use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Requests\GetTransaction;
-use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Requests\GetTransactionToken;
-use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Requests\PostOrder;
-use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Requests\PostRefund;
-use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Response\PaymentMethod\AllowedAmount;
-use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Response\PaymentMethod\PaymentMethod;
-use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Transaction\PaymentDetails;
-use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Transaction\Transaction;
-use ModularMultiSafepay\ModularMiddlewareMultiSafepay\MultisafepayClient;
+use ModularMultiSafepay\ModularMultiSafepay\Order\Item;
+use ModularMultiSafepay\ModularMultiSafepay\Order\Order;
+use ModularMultiSafepay\ModularMultiSafepay\Order\ShoppingCart;
+use ModularMultiSafepay\ModularMultiSafepay\Refund\Refundable;
+use ModularMultiSafepay\ModularMultiSafepay\Requests\GetGateway;
+use ModularMultiSafepay\ModularMultiSafepay\Requests\VerifyApiKey;
+use ModularMultiSafepay\ModularMultiSafepay\Requests\GetPaymentMethods;
+use ModularMultiSafepay\ModularMultiSafepay\Requests\GetTransaction;
+use ModularMultiSafepay\ModularMultiSafepay\Requests\GetTransactionToken;
+use ModularMultiSafepay\ModularMultiSafepay\Requests\PostOrder;
+use ModularMultiSafepay\ModularMultiSafepay\Requests\PostRefund;
+use ModularMultiSafepay\ModularMultiSafepay\Response\PaymentMethod\AllowedAmount;
+use ModularMultiSafepay\ModularMultiSafepay\Response\PaymentMethod\PaymentMethod;
+use ModularMultiSafepay\ModularMultiSafepay\Transaction\PaymentDetails;
+use ModularMultiSafepay\ModularMultiSafepay\Transaction\Transaction;
+use ModularMultiSafepay\ModularMultiSafepay\MultisafepayClient;
 use Illuminate\Support\Facades\Log;
 
 final class MultiSafepay
@@ -50,7 +52,7 @@ final class MultiSafepay
                 ),
                 $paymentMethod['allowed_currencies'],
                 $paymentMethod['icon_urls']['vector'],
-                in_array('APICONNCOMP', $paymentMethod['allowed_apps']),
+                in_array('Connect Components', $paymentMethod['allowed_apps']),
             );
         }, $response['data']);
     }
@@ -136,4 +138,36 @@ final class MultiSafepay
             $shoppingCart
         );
     }
+
+    public function getGateway(string $api_key, string $gateway_id)
+    {
+        $data['success'] = true;
+        if ($gateway_id === 'creditcard'){
+            $gateways = $this->client->do(new verifyApiKey($api_key))['data'];
+            $validGateway = ['AMEX','MAESTRO','MASTERCARD','VISA'];
+            $is_valid = false;
+            foreach ($gateways as $key => $value){
+                if (in_array($value['id'],$validGateway)){
+                    $is_valid = true;
+                }
+            }
+            if ($is_valid){
+                return $data;
+            }
+        }
+        if ($gateway_id === 'wallet'){
+            return $data;
+        }
+        return $this->client->do(new GetGateway($api_key, $gateway_id));
+    }
+
+    public function verifyApiKey(string $api_Key): bool
+    {
+        $response = $this->client->do(new verifyApiKey($api_Key))['data'];
+        if (!empty($response)){
+            return true;
+        }
+        return false;
+    }
+
 }

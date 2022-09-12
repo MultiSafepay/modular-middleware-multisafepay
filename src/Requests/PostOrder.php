@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
-namespace ModularMultiSafepay\ModularMiddlewareMultiSafepay\Requests;
+namespace ModularMultiSafepay\ModularMultiSafepay\Requests;
 
-use ModularMultiSafepay\ModularMiddlewareMultiSafepay\MultiSafepayRequest;
-use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Order\Order;
+use ModularMultiSafepay\ModularMultiSafepay\MultiSafepayRequest;
+use ModularMultiSafepay\ModularMultiSafepay\Order\Order;
 
 class PostOrder extends MultiSafepayRequest
 {

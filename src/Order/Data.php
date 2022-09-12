@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 
 
-namespace ModularMultiSafepay\ModularMiddlewareMultiSafepay\Order;
+namespace ModularMultiSafepay\ModularMultiSafepay\Order;
 
 
-use ModularMultiSafepay\ModularMiddlewareMultiSafepay\IFormatData;
+use ModularMultiSafepay\ModularMultiSafepay\IFormatData;
 
 class Data implements IFormatData
 {

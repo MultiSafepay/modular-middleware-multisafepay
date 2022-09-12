@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
 
-namespace ModularMultiSafepay\ModularMiddlewareMultiSafepay\Transaction;
+namespace ModularMultiSafepay\ModularMultiSafepay\Transaction;
 
-use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Order\ShoppingCart;
+use ModularMultiSafepay\ModularMultiSafepay\Order\ShoppingCart;
 
 /**
  * @TODO more data is available but not yet added see https://docs.multisafepay.com/api/#get-order-details

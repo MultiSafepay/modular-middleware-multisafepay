@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 
 
-namespace ModularMultiSafepay\ModularMiddlewareMultiSafepay;
+namespace ModularMultiSafepay\ModularMultiSafepay;
 
 
 abstract class MultiSafepayRequest

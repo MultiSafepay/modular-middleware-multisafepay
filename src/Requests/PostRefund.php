@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 
-namespace ModularMultiSafepay\ModularMiddlewareMultiSafepay\Requests;
+namespace ModularMultiSafepay\ModularMultiSafepay\Requests;
 
-use ModularMultiSafepay\ModularMiddlewareMultiSafepay\MultiSafepayRequest;
-use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Refund\Refund;
-use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Refund\Refundable;
+use ModularMultiSafepay\ModularMultiSafepay\MultiSafepayRequest;
+use ModularMultiSafepay\ModularMultiSafepay\Refund\Refund;
+use ModularMultiSafepay\ModularMultiSafepay\Refund\Refundable;
 
 final class PostRefund extends MultiSafepayRequest
 {

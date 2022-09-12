@@ -1,6 +1,6 @@
 <?php
 
-namespace ModularMultiSafepay\ModularMiddlewareMultiSafepay\Order;
+namespace ModularMultiSafepay\ModularMultiSafepay\Order;
 
 class CustomerInfo extends DeliveryInfo
 {
