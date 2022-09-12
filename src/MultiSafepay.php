@@ -17,7 +17,7 @@ use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Response\PaymentMethod\All
 use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Response\PaymentMethod\PaymentMethod;
 use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Transaction\PaymentDetails;
 use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Transaction\Transaction;
-use App\Http\Clients\MultisafepayClient;
+use ModularMultiSafepay\ModularMiddlewareMultiSafepay\MultisafepayClient;
 use Illuminate\Support\Facades\Log;
 
 final class MultiSafepay
