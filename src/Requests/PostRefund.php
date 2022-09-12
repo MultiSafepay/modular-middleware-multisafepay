@@ -2,9 +2,9 @@
 
 namespace ModularMultiSafepay\ModularMiddlewareMultiSafepay\Requests;
 
-use App\Data\Multisafepay\MultiSafepayRequest;
-use App\Data\Multisafepay\Refund\Refund;
-use App\Data\Multisafepay\Refund\Refundable;
+use ModularMultiSafepay\ModularMiddlewareMultiSafepay\MultiSafepayRequest;
+use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Refund\Refund;
+use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Refund\Refundable;
 
 final class PostRefund extends MultiSafepayRequest
 {

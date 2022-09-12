@@ -3,7 +3,7 @@
 
 namespace ModularMultiSafepay\ModularMiddlewareMultiSafepay\Order;
 
-use App\Data\Multisafepay\IFormatData;
+use ModularMultiSafepay\ModularMiddlewareMultiSafepay\IFormatData;
 
 class Order implements IFormatData
 {

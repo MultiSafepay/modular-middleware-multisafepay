@@ -2,8 +2,8 @@
 
 namespace ModularMultiSafepay\ModularMiddlewareMultiSafepay\Requests;
 
-use App\Data\Multisafepay\MultiSafepayRequest;
-use App\Data\Multisafepay\Order\Order;
+use ModularMultiSafepay\ModularMiddlewareMultiSafepay\MultiSafepayRequest;
+use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Order\Order;
 
 class PostOrder extends MultiSafepayRequest
 {

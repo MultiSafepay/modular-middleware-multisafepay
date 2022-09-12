@@ -4,19 +4,19 @@
 namespace ModularMultiSafepay\ModularMiddlewareMultiSafepay;
 
 
-use App\Data\Multisafepay\Order\Item;
-use App\Data\Multisafepay\Order\Order;
-use App\Data\Multisafepay\Order\ShoppingCart;
-use App\Data\Multisafepay\Refund\Refundable;
-use App\Data\Multisafepay\Requests\GetPaymentMethods;
-use App\Data\Multisafepay\Requests\GetTransaction;
-use App\Data\Multisafepay\Requests\GetTransactionToken;
-use App\Data\Multisafepay\Requests\PostOrder;
-use App\Data\Multisafepay\Requests\PostRefund;
-use App\Data\Multisafepay\Response\PaymentMethod\AllowedAmount;
-use App\Data\Multisafepay\Response\PaymentMethod\PaymentMethod;
-use App\Data\Multisafepay\Transaction\PaymentDetails;
-use App\Data\Multisafepay\Transaction\Transaction;
+use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Order\Item;
+use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Order\Order;
+use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Order\ShoppingCart;
+use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Refund\Refundable;
+use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Requests\GetPaymentMethods;
+use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Requests\GetTransaction;
+use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Requests\GetTransactionToken;
+use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Requests\PostOrder;
+use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Requests\PostRefund;
+use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Response\PaymentMethod\AllowedAmount;
+use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Response\PaymentMethod\PaymentMethod;
+use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Transaction\PaymentDetails;
+use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Transaction\Transaction;
 use App\Http\Clients\MultisafepayClient;
 use Illuminate\Support\Facades\Log;
 

@@ -4,9 +4,9 @@
 namespace ModularMultiSafepay\ModularMiddlewareMultiSafepay\Requests;
 
 
-use App\Data\Multisafepay\MultiSafepayRequest;
-use App\Data\Multisafepay\Response\PaymentMethod\AllowedAmount;
-use App\Data\Multisafepay\Response\PaymentMethod\PaymentMethod;
+use ModularMultiSafepay\ModularMiddlewareMultiSafepay\MultiSafepayRequest;
+use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Response\PaymentMethod\AllowedAmount;
+use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Response\PaymentMethod\PaymentMethod;
 use Illuminate\Support\Collection;
 
 final class GetPaymentMethods extends MultiSafepayRequest

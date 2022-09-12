@@ -3,7 +3,7 @@
 
 namespace ModularMultiSafepay\ModularMiddlewareMultiSafepay\Transaction;
 
-use App\Data\Multisafepay\Order\ShoppingCart;
+use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Order\ShoppingCart;
 
 /**
  * @TODO more data is available but not yet added see https://docs.multisafepay.com/api/#get-order-details

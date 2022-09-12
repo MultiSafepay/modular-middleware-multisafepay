@@ -4,7 +4,7 @@
 namespace ModularMultiSafepay\ModularMiddlewareMultiSafepay\Refund;
 
 
-use App\Data\Multisafepay\Order\ShoppingCart;
+use ModularMultiSafepay\ModularMiddlewareMultiSafepay\Order\ShoppingCart;
 
 class CartRefund extends Refundable
 {

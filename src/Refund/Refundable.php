@@ -4,7 +4,7 @@
 namespace ModularMultiSafepay\ModularMiddlewareMultiSafepay\Refund;
 
 
-use App\Data\Multisafepay\IFormatData;
+use ModularMultiSafepay\ModularMiddlewareMultiSafepay\IFormatData;
 
 abstract class Refundable implements IFormatData
 {

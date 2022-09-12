@@ -2,7 +2,7 @@
 
 namespace ModularMultiSafepay\ModularMiddlewareMultiSafepay\Requests;
 
-use App\Data\Multisafepay\MultiSafepayRequest;
+use ModularMultiSafepay\ModularMiddlewareMultiSafepay\MultiSafepayRequest;
 
 class GetTransaction extends MultiSafepayRequest
 {

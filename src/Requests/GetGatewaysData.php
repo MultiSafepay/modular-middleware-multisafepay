@@ -2,7 +2,7 @@
 
 namespace ModularMultiSafepay\ModularMiddlewareMultiSafepay\Requests;
 
-use App\Data\Multisafepay\MultiSafepayRequest;
+use ModularMultiSafepay\ModularMiddlewareMultiSafepay\MultiSafepayRequest;
 
 final class GetGatewaysData extends MultiSafepayRequest
 {
