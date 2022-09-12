@@ -45,10 +45,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Modular-MultiSafepay\\ModularMiddlewareMultiSafepay\\ModularMiddlewareMultiSafepayServiceProvider"
+                "ModularMultiSafepay\\ModularMiddlewareMultiSafepay\\ModularMiddlewareMultiSafepayServiceProvider"
             ],
             "aliases": {
-                "ModularMiddlewareMultisafepay": "Modular-MultiSafepay\\ModularMiddlewareMultiSafepay\\Facades\\ModularMiddlewareMultiSafepay"
+                "ModularMiddlewareMultisafepay": "ModularMultiSafepay\\ModularMiddlewareMultiSafepay\\Facades\\ModularMiddlewareMultiSafepay"
             }
         }
     },
