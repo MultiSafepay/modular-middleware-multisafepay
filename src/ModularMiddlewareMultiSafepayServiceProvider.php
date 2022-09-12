@@ -1,11 +1,11 @@
 <?php
 
-namespace ModularMultisafepay\ModularMiddlewareMultisafepay;
+namespace ModularMultiSafepay\ModularMiddlewareMultiSafepay;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class ModularMiddlewareMultisafepayServiceProvider extends PackageServiceProvider
+class ModularMiddlewareMultiSafepayServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
