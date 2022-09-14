@@ -28,7 +28,6 @@ class ModularMiddlewareMultiSafepayServiceProvider extends PackageServiceProvide
         $this->publishes([
             __DIR__.'/../config/multisafepay.php' => config_path('multisafepay.php'),
         ], 'modular-middleware');
-        $this->loadRoutesFrom(__DIR__ . '/routes/multisafepay.php');
     }
 
     public function configurePackage(Package $package): void
