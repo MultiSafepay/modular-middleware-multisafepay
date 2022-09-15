@@ -162,9 +162,9 @@ final class MultiSafepay
         return $this->client->do(new GetGateway($api_key, $gateway_id));
     }
 
-    public function verifyApiKey(string $api_Key): bool
+    public function VerifyApiKey(string $api_Key): bool
     {
-        $response = $this->client->do(new verifyApiKey($api_Key))['data'];
+        $response = $this->client->do(new VerifyApiKey($api_Key))['data'];
         if (!empty($response)){
             return true;
         }

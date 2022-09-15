@@ -4,7 +4,7 @@ namespace ModularMultiSafepay\ModularMultiSafepay\Requests;
 
 use ModularMultiSafepay\ModularMultiSafepay\MultiSafepayRequest;
 
-class verifyApiKey extends MultiSafepayRequest
+class VerifyApiKey extends MultiSafepayRequest
 {
 
     /**
