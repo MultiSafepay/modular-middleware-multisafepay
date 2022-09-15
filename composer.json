@@ -1,12 +1,12 @@
 {
-    "name": "modular-middleware/modular-middleware-multisafepay",
+    "name": "multisafepay/modular-middleware-multisafepay",
     "description": "This is my package modular-middleware-multisafepay",
     "keywords": [
         "Modular-Multisafepay",
         "laravel",
         "modular-middleware-multisafepay"
     ],
-    "homepage": "https://github.com/modular-multisafepay/modular-middleware-multisafepay",
+    "homepage": "https://github.com/multisafepay/modular-middleware-multisafepay",
     "license": "MIT",
     "authors": [
         {
