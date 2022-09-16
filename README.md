@@ -12,6 +12,12 @@ You can publish with:
 php artisan vendor:publish --tag="modular-middleware"
 
 ```
+## Finialize
+
+You must add the providers into config/app.php
+```bash
+\ModularMultiSafepay\ModularMultiSafepay\ModularMiddlewareMultiSafepayServiceProvider::class,
+```
 
 ## Changelog
 
