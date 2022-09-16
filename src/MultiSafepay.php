@@ -9,6 +9,7 @@ use ModularMultiSafepay\ModularMultiSafepay\Order\Order;
 use ModularMultiSafepay\ModularMultiSafepay\Order\ShoppingCart;
 use ModularMultiSafepay\ModularMultiSafepay\Refund\Refundable;
 use ModularMultiSafepay\ModularMultiSafepay\Requests\GetGateway;
+use ModularMultiSafepay\ModularMultiSafepay\Requests\GetOrderGateway;
 use ModularMultiSafepay\ModularMultiSafepay\Requests\VerifyApiKey;
 use ModularMultiSafepay\ModularMultiSafepay\Requests\GetPaymentMethods;
 use ModularMultiSafepay\ModularMultiSafepay\Requests\GetTransaction;
@@ -161,13 +162,25 @@ final class MultiSafepay
         return $this->client->do(new GetGateway($api_key, $gateway_id));
     }
 
-    public function verifyApiKey(string $api_Key): bool
+    public function VerifyApiKey(string $api_Key): bool
     {
-        $response = $this->client->do(new verifyApiKey($api_Key))['data'];
+        $response = $this->client->do(new VerifyApiKey($api_Key))['data'];
         if (!empty($response)){
             return true;
         }
         return false;
+    }
+
+    public function getOrderGateway(string $api_Key, string $order_id): string
+    {
+
+        $response = $this->client->do(new GetOrderGateway($api_Key,$order_id));
+        if ($response['success']){
+            return $response['data']['payment_details']['type'];
+        }
+
+        Log::info('Couldnt get the order for: ' . $order_id);
+        return '';
     }
 
 }
