@@ -7,9 +7,9 @@ namespace ModularMultiSafepay\ModularMultiSafepay\Refund;
 final class Refund extends Refundable
 {
     public function __construct(
-        string        $orderId,
-        string        $refundId,
-        public int    $amount,
+        public        $orderId,
+        public        $refundId,
+        public        $amount,
         public string $currency,
         public string $description = '')
     {

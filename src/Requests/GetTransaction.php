@@ -8,7 +8,7 @@ class GetTransaction extends MultiSafepayRequest
 {
     public function __construct(
         protected string $apiKey,
-        protected string $orderId,
+        protected $orderId,
     )
     {
         parent::__construct($apiKey, 'GET', 'orders' .'/' . $this->orderId);
