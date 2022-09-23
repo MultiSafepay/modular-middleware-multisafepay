@@ -146,13 +146,17 @@ final class MultiSafepay
         if ($gateway_id === 'creditcard'){
             $gateways = $this->client->do(new verifyApiKey($api_key))['data'];
             $validGateway = ['AMEX','MAESTRO','MASTERCARD','VISA'];
-            $is_valid = false;
-            foreach ($gateways as $key => $value){
+            $isValid = false;
+            foreach ($gateways as $value){
                 if (in_array($value['id'],$validGateway)){
-                    $is_valid = true;
+                    $isValid = true;
                 }
             }
-            if ($is_valid){
+            Log::info('Creditcard check', [
+                'Valid' => $isValid,
+                'Gateways' => $gateways
+            ]);
+            if ($isValid){
                 return $data;
             }
         }
