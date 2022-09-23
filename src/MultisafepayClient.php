@@ -2,6 +2,7 @@
 
 namespace ModularMultiSafepay\ModularMultiSafepay;
 
+use Illuminate\Support\Facades\Log;
 use ModularMultiSafepay\ModularMultiSafepay\MultiSafepayRequest;
 use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;
@@ -39,6 +40,9 @@ final class MultisafepayClient
 
     protected function toUrl(string $path): string
     {
+        Log::info("MSP API URL: ", [
+            $this->apiUrl . $path
+        ]);
         return $this->apiUrl . $path;
     }
 }
