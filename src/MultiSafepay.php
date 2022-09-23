@@ -168,8 +168,11 @@ final class MultiSafepay
 
     public function VerifyApiKey(string $api_Key): bool
     {
-        $response = $this->client->do(new VerifyApiKey($api_Key))['data'];
-        if (!empty($response)){
+        $response = $this->client->do(new VerifyApiKey($api_Key));
+        Log::info('Verify Response', [
+            'Response' => $response,
+        ]);
+        if (!empty($response['data'])){
             return true;
         }
         return false;
