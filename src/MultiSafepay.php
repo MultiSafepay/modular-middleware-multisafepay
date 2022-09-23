@@ -95,7 +95,7 @@ final class MultiSafepay
         return $response->successful();
     }
 
-    public function getTransaction(string $key, string $id): ?Transaction
+    public function getTransaction(string $key, $id): ?Transaction
     {
         $response = $this->client->do(new GetTransaction($key, $id));
 
