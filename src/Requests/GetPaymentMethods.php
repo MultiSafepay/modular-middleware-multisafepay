@@ -19,7 +19,7 @@ final class GetPaymentMethods extends MultiSafepayRequest
         protected string $language = 'en'
     )
     {
-        parent::__construct($apiKey, 'GET', 'payment-methods');
+        parent::__construct($apiKey, 'GET', 'payment-methods', ['grouped_cards=1']);
     }
 
     public function toResponse($response): Collection
@@ -34,7 +34,7 @@ final class GetPaymentMethods extends MultiSafepayRequest
                 ),
                 $paymentMethod['allowed_currencies'],
                 $paymentMethod['icon_urls']['vector'],
-                in_array('APICONNCOMP', $paymentMethod['allowed_apps']),
+                $paymentMethod['supported_apps']['payment_component'],
             );
         });
     }

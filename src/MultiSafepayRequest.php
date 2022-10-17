@@ -10,6 +10,7 @@ abstract class MultiSafepayRequest
         protected string $apiKey,
         protected string $method,
         protected string $endpoint,
+        protected array $params = [],
     )
     {
     }
@@ -26,7 +27,11 @@ abstract class MultiSafepayRequest
 
     public function getEndpoint(): string
     {
-        return $this->endpoint;
+        if (empty($this->params)) {
+            return $this->endpoint;
+        }
+
+        return $this->endpoint . "?" . implode('&', $this->params);
     }
 
     public function getParams(): array
