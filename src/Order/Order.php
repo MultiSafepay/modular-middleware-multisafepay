@@ -21,6 +21,7 @@ class Order implements IFormatData
         public ?string        $payload = null,
         public ?ShoppingCart  $shoppingCart = null,
         public ?Data          $data = null,
+        public ?int           $daysActive = 30,
     )
     {
     }
@@ -38,7 +39,8 @@ class Order implements IFormatData
             'plugin' => [
                 'plugin_version' => 'MW: 1.0.0',
                 'partner' => 'MultiSafepay'
-            ]
+            ],
+            'days_active' => $this->daysActive
         ];
 
         if ($this->customerInfo) {
