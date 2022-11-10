@@ -15,11 +15,11 @@ class ModularMiddlewareMultiSafepayServiceProvider extends PackageServiceProvide
     public function register()
     {
         $this->app->singleton(MultisafepayClient::class, function () {
-            return new MultisafepayClient(config('multisafepay.apiUrl'));
+            return new MultisafepayClient();
         });
 
         $this->app->singleton(MultiSafepay::class, function(){
-            return new MultiSafepay(new MultisafepayClient(config('multisafepay.apiUrl')));
+            return new MultiSafepay(new MultisafepayClient());
         });
     }
 

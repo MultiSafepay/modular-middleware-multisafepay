@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Http;
 
 final class MultisafepayClient
 {
-    public function __construct(protected string $apiUrl) {}
+    public function __construct(protected string $environment = "test") {}
 
     public function do(MultiSafepayRequest $multiSafepayRequest) : Response
     {
@@ -40,6 +40,16 @@ final class MultisafepayClient
 
     protected function toUrl(string $path): string
     {
+        if ($this->environment === 'test') {
+            $this->apiUrl = config('multisafepay.apiUrl.test');
+        }
+        if ($this->environment === 'dev') {
+            $this->apiUrl = config('multisafepay.apiUrl.dev');
+        }
+        if ($this->environment === 'live') {
+            $this->apiUrl = config('multisafepay.apiUrl.live');
+        }
+
         Log::info("MSP API URL: ", [
             $this->apiUrl . $path
         ]);
