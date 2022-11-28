@@ -42,7 +42,6 @@ final class MultiSafepay
             Log::error('Could not get payment methods', [$response]);
             return [];
         }
-
         return array_map(static function ($paymentMethod) {
             return new PaymentMethod(
                 $paymentMethod['id'],
@@ -53,7 +52,7 @@ final class MultiSafepay
                 ),
                 $paymentMethod['allowed_currencies'],
                 $paymentMethod['icon_urls']['vector'],
-                in_array('Connect Components', $paymentMethod['allowed_apps']),
+                in_array('payment_components', $paymentMethod['apps']),
             );
         }, $response['data']);
     }
