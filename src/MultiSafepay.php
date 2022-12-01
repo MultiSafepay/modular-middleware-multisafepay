@@ -52,7 +52,7 @@ final class MultiSafepay
                 ),
                 $paymentMethod['allowed_currencies'],
                 $paymentMethod['icon_urls']['vector'],
-                in_array('payment_components', $paymentMethod['apps']),
+                $paymentMethod['apps']['payment_components']['is_enabled'],
             );
         }, $response['data']);
     }
