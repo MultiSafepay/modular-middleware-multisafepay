@@ -2,6 +2,8 @@
 
 namespace ModularMultiSafepay\ModularMultiSafepay\Order;
 
+use Illuminate\Support\Facades\Log;
+
 class CustomerInfo extends DeliveryInfo
 {
     public function __construct(
@@ -28,6 +30,16 @@ class CustomerInfo extends DeliveryInfo
 
     public function formatData(): array
     {
+        //
+        if (empty($this->houseNumber)){
+            $SplitAddress = $this->parse($this->address);
+
+            if (isset($SplitAddress['housenumber']))
+                $this->houseNumber = $SplitAddress['housenumber'];
+
+            $this->address = $SplitAddress['streetname'];
+        }
+
         $customerInfo = array_merge(
             parent::formatData(),
         [
