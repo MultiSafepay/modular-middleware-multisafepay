@@ -20,7 +20,7 @@ final class GetPaymentMethods extends MultiSafepayRequest
         protected string $language = 'en'
     )
     {
-        parent::__construct($apiKey, 'GET', 'payment-methods');
+        parent::__construct($apiKey, 'GET', 'payment-methods?include_coupons=1');
     }
     //Doesn't work
     public function toResponse($response): Collection
