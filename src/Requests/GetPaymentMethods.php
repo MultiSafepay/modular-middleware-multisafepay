@@ -4,6 +4,7 @@
 namespace ModularMultiSafepay\ModularMultiSafepay\Requests;
 
 
+use Illuminate\Support\Facades\Log;
 use ModularMultiSafepay\ModularMultiSafepay\MultiSafepayRequest;
 use ModularMultiSafepay\ModularMultiSafepay\Response\PaymentMethod\AllowedAmount;
 use ModularMultiSafepay\ModularMultiSafepay\Response\PaymentMethod\PaymentMethod;
@@ -21,7 +22,7 @@ final class GetPaymentMethods extends MultiSafepayRequest
     {
         parent::__construct($apiKey, 'GET', 'payment-methods');
     }
-
+    //Doesn't work
     public function toResponse($response): Collection
     {
         return collect($response['data'])->map(function ($paymentMethod) {
