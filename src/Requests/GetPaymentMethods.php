@@ -35,7 +35,7 @@ final class GetPaymentMethods extends MultiSafepayRequest
                 ),
                 $paymentMethod['allowed_currencies'],
                 $paymentMethod['icon_urls']['vector'],
-                in_array('APICONNCOMP', $paymentMethod['allowed_apps']),
+                $paymentMethod['apps']['payment_components']['is_enabled'],
             );
         });
     }
